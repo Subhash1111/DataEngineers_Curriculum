@@ -1,0 +1,15 @@
+.venv/
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.streamlit/cache/
+.DS_Store
+data/
+logs/
+*.csv
+*.parquet
+*.pkl
+*.h5
+*.pt
+*.onnx
