@@ -1,22 +1,8 @@
-import sys
-sys.path.append("/Users/subhasht/Desktop/VSCode Programs/Curriculam")
+# data.py
+# Full 12-week curriculum for GenAI Forge: Data • Science • Engineering
 
-
-import streamlit as st
-import pandas as pd
-from io import StringIO
-from textwrap import dedent
-
-st.set_page_config(
-    page_title="12‑Week Curriculum Planner — Data Eng + DS + AI",
-    page_icon="📚",
-    layout="wide",
-)
-
-# ----------------------------
-# Curriculum Data (Edit as needed)
-# ----------------------------
 CURRICULUM = [
+    # -------------------- WEEK 1 --------------------
     {
         "phase": "Data Engineering Foundations",
         "week": 1,
@@ -39,13 +25,12 @@ CURRICULUM = [
                 "Extend with MongoDB to store JSON-based book reviews",
             ],
             "datasets": [
-                {
-                    "label": "Open Library API",
-                    "url": "https://openlibrary.org/developers/api",
-                }
+                {"label": "Open Library API", "url": "https://openlibrary.org/developers/api"}
             ],
         },
     },
+
+    # -------------------- WEEK 2 --------------------
     {
         "phase": "Data Engineering Foundations",
         "week": 2,
@@ -75,6 +60,8 @@ CURRICULUM = [
             ],
         },
     },
+
+    # -------------------- WEEK 3 --------------------
     {
         "phase": "Data Engineering Foundations",
         "week": 3,
@@ -97,10 +84,12 @@ CURRICULUM = [
                 "Load into warehouse (BigQuery/PostgreSQL)",
             ],
             "datasets": [
-                {"label": "OpenWeatherMap API", "url": "https://openweathermap.org/api"},
+                {"label": "OpenWeatherMap API", "url": "https://openweathermap.org/api"}
             ],
         },
     },
+
+    # -------------------- WEEK 4 --------------------
     {
         "phase": "Data Engineering Foundations",
         "week": 4,
@@ -130,6 +119,8 @@ CURRICULUM = [
             ],
         },
     },
+
+    # -------------------- WEEK 5 --------------------
     {
         "phase": "Data Science Foundations",
         "week": 5,
@@ -152,10 +143,12 @@ CURRICULUM = [
                 "Generate insights",
             ],
             "datasets": [
-                {"label": "Kaggle — Titanic", "url": "https://www.kaggle.com/c/titanic"},
+                {"label": "Kaggle — Titanic", "url": "https://www.kaggle.com/c/titanic"}
             ],
         },
     },
+
+    # -------------------- WEEK 6 --------------------
     {
         "phase": "Data Science Foundations",
         "week": 6,
@@ -185,6 +178,8 @@ CURRICULUM = [
             ],
         },
     },
+
+    # -------------------- WEEK 7 --------------------
     {
         "phase": "Data Science Foundations",
         "week": 7,
@@ -214,6 +209,8 @@ CURRICULUM = [
             ],
         },
     },
+
+    # -------------------- WEEK 8 --------------------
     {
         "phase": "Data Science Foundations",
         "week": 8,
@@ -243,6 +240,8 @@ CURRICULUM = [
             ],
         },
     },
+
+    # -------------------- WEEK 9 --------------------
     {
         "phase": "AI & Advanced ML",
         "week": 9,
@@ -265,65 +264,92 @@ CURRICULUM = [
                 "Experiment with architecture/depth",
             ],
             "datasets": [
-                {"label": "MNIST", "url": "http://yann.lecun.com/exdb/mnist/"},
+                {"label": "MNIST", "url": "http://yann.lecun.com/exdb/mnist/"}
             ],
         },
     },
+
+    # -------------------- WEEK 10 --------------------
     {
         "phase": "AI & Advanced ML",
         "week": 10,
-        "title": "Natural Language Processing (NLP)",
+        "title": "NLP & Generative AI",
         "topics": [
             "Text preprocessing (tokenization, stemming, lemmatization)",
-            "Embeddings (Word2Vec, GloVe, BERT)",
-            "Applications: Sentiment analysis, chatbot basics",
+            "Classical NLP: TF-IDF, n-grams, sentiment classification",
+            "Embeddings (Word2Vec, GloVe, BERT family)",
+            "Generative AI: LLM basics, prompt engineering, few/zero-shot",
+            "Retrieval-Augmented Generation (RAG): indexing, retrieval, grounding",
+            "Fine-tuning & LoRA basics, safety/guardrails, evaluation of LLMs",
         ],
         "goals": [
-            "Process and represent text",
-            "Train NLP models",
-            "Apply embeddings in real tasks",
+            "Process and represent text for downstream tasks",
+            "Train/evaluate classic and transformer-based NLP models",
+            "Build a small GenAI app with prompts or RAG",
         ],
         "project": {
-            "name": "Sentiment Analysis on Movie Reviews",
+            "name": "Sentiment + GenAI Assistant",
             "tasks": [
-                "Preprocess reviews",
-                "Train classifier with embeddings",
-                "Evaluate and interpret errors",
+                "Baseline: train a sentiment classifier on movie reviews",
+                "GenAI: build a simple Q&A or summarizer using an LLM API or local model",
+                "(Optional) Add RAG over a small document set and evaluate responses",
             ],
             "datasets": [
                 {
                     "label": "IMDB Movie Reviews",
                     "url": "https://ai.stanford.edu/~amaas/data/sentiment/",
-                }
+                },
+                {"label": "(Optional) Any small docs for RAG", "url": ""},
             ],
         },
     },
+
+    # -------------------- WEEK 11 --------------------
     {
         "phase": "AI & Advanced ML",
         "week": 11,
-        "title": "Model Deployment & MLOps",
+        "title": "Model Deployment, MLOps & AI Governance",
         "topics": [
             "Model serving (Flask, FastAPI)",
             "Containerization with Docker",
             "Model tracking & monitoring (MLflow)",
+            "AI governance: fairness, bias, accountability, transparency, privacy",
+            "Explainability (SHAP/LIME), model cards, data/documentation lineage",
+            "Compliance & regulations (GDPR, EU AI Act — overview), auditability",
         ],
         "goals": [
             "Deploy ML models as APIs",
             "Use Docker for portability",
-            "Track and version models",
+            "Track, monitor, and document models responsibly",
+            "Evaluate bias & fairness; produce a model card and monitoring plan",
         ],
         "project": {
-            "name": "Deploy Predictive Model as API",
+            "name": "Deploy Model API + AI Governance Report",
             "tasks": [
                 "Take trained model from Week 7",
-                "Expose API using FastAPI/Flask",
-                "Containerize with Docker",
+                "Expose API using FastAPI/Flask; containerize with Docker",
+                "Integrate MLflow for experiment tracking & model registry",
+                "Run SHAP on validation set; analyze subgroup performance metrics",
+                "Create a Model Card (intended use, risks, metrics, monitoring)",
             ],
             "datasets": [
-                {"label": "Uses Week 7 trained model", "url": ""},
+                {
+                    "label": "Google AI — Model Cards",
+                    "url": "https://modelcards.withgoogle.com/",
+                },
+                {
+                    "label": "Microsoft Responsible AI Practices",
+                    "url": "https://learn.microsoft.com/en-us/azure/architecture/guide/responsible-ai/",
+                },
+                {
+                    "label": "EU AI Act — Community Summary",
+                    "url": "https://artificialintelligenceact.eu/",
+                },
             ],
         },
     },
+
+    # -------------------- WEEK 12 --------------------
     {
         "phase": "AI & Advanced ML",
         "week": 12,
@@ -333,190 +359,30 @@ CURRICULUM = [
             "Reporting and stakeholder presentation",
         ],
         "goals": [
-            "Deliver end‑to‑end project",
+            "Deliver end-to-end project",
             "Document and present outcomes",
         ],
         "project": {
             "name": "Choose 1–3 Capstones",
             "tasks": [
-                "Data Eng: End‑to‑end ETL with Airflow + warehouse + dashboard",
+                "Data Eng: End-to-end ETL with Airflow + warehouse + dashboard",
                 "Data Science: Predictive analytics (loan default/churn)",
                 "AI: NLP chatbot or image classifier deployed as API",
             ],
             "datasets": [
-                {"label": "NYC Taxi Data", "url": "https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page"},
-                {"label": "Kaggle — Loan Default", "url": "https://www.kaggle.com/datasets/wordsforthewise/lending-club"},
-                {"label": "Kaggle — Disaster Tweets", "url": "https://www.kaggle.com/c/nlp-getting-started"},
+                {
+                    "label": "NYC Taxi Data",
+                    "url": "https://www1.nyc.gov/site/tlc/about/tlc-trip-record-data.page",
+                },
+                {
+                    "label": "Kaggle — Loan Default",
+                    "url": "https://www.kaggle.com/datasets/wordsforthewise/lending-club",
+                },
+                {
+                    "label": "Kaggle — Disaster Tweets",
+                    "url": "https://www.kaggle.com/c/nlp-getting-started",
+                },
             ],
         },
     },
 ]
-
-# ----------------------------
-# Helpers
-# ----------------------------
-
-def to_dataframe(curriculum):
-    rows = []
-    for c in curriculum:
-        rows.append(
-            {
-                "Phase": c["phase"],
-                "Week": c["week"],
-                "Title": c["title"],
-                "Topics": " • ".join(c["topics"]),
-                "Goals": " • ".join(c["goals"]),
-                "Project": c["project"]["name"],
-                "Project Tasks": " • ".join(c["project"]["tasks"]),
-                "Datasets": ", ".join([d["label"] for d in c["project"].get("datasets", [])]),
-            }
-        )
-    df = pd.DataFrame(rows).sort_values("Week")
-    return df
-
-
-def to_markdown(curriculum, org_name: str = "Your Organization") -> str:
-    lines = [f"# 12‑Week Training — Data Engineering, Data Science & AI\n", f"**Organization:** {org_name}\n", "\n"]
-    phases = {}
-    for c in curriculum:
-        phases.setdefault(c["phase"], []).append(c)
-    for phase, weeks in phases.items():
-        lines.append(f"## {phase}\n")
-        for c in sorted(weeks, key=lambda x: x["week"]):
-            lines.append(f"### Week {c['week']}: {c['title']}\n")
-            lines.append("**Topics**\n")
-            for t in c["topics"]:
-                lines.append(f"- {t}")
-            lines.append("**Learning Goals**\n")
-            for g in c["goals"]:
-                lines.append(f"- {g}")
-            p = c["project"]
-            lines.append(f"**Sample Project: {p['name']}**\n")
-            lines.append("Tasks:")
-            for task in p["tasks"]:
-                lines.append(f"- {task}")
-            if p.get("datasets"):
-                lines.append("Datasets:")
-                for d in p["datasets"]:
-                    if d.get("url"):
-                        lines.append(f"- [{d['label']}]({d['url']})")
-                    else:
-                        lines.append(f"- {d['label']}")
-            lines.append("")
-    return "\n".join(lines)
-
-
-# ----------------------------
-# Sidebar Controls
-# ----------------------------
-with st.sidebar:
-    st.title("📚 Curriculum Planner")
-    st.caption("Python is a prerequisite for this course.")
-    org_name = st.text_input("Organization / Program Name", value="Data Academy")
-    show_links = st.toggle("Show dataset links", value=True)
-    selected_weeks = st.multiselect(
-        "Filter by week(s)", options=[c["week"] for c in CURRICULUM], default=[c["week"] for c in CURRICULUM]
-    )
-    phases = sorted(set([c["phase"] for c in CURRICULUM]))
-    phase_filter = st.multiselect("Filter by phase", options=phases, default=phases)
-
-    st.divider()
-    st.write("### Export")
-    df = to_dataframe(CURRICULUM)
-    buf_csv = StringIO()
-    df.to_csv(buf_csv, index=False)
-    st.download_button("⬇️ Download CSV", buf_csv.getvalue(), file_name="12_week_curriculum.csv", mime="text/csv")
-
-    md = to_markdown(CURRICULUM, org_name)
-    st.download_button(
-        "⬇️ Download Markdown Syllabus",
-        data=md,
-        file_name="12_week_curriculum.md",
-        mime="text/markdown",
-    )
-
-# ----------------------------
-# Main Layout
-# ----------------------------
-st.title("12‑Week Training — Data Engineering, Data Science & AI")
-st.write(f"**Organization:** {org_name}")
-
-# Summary cards
-cols = st.columns(3)
-with cols[0]:
-    st.metric("Phases", len(set([c["phase"] for c in CURRICULUM])))
-with cols[1]:
-    st.metric("Weeks", len(CURRICULUM))
-with cols[2]:
-    all_projects = [c["project"]["name"] for c in CURRICULUM]
-    st.metric("Projects", len(all_projects))
-
-# Filtered view
-filtered = [c for c in CURRICULUM if c["week"] in selected_weeks and c["phase"] in phase_filter]
-filtered = sorted(filtered, key=lambda x: x["week"])
-
-# Tabs for Overview / Weeks / Projects
-tab_overview, tab_weeks, tab_projects = st.tabs(["Overview", "Weekly Plan", "Projects"])
-
-with tab_overview:
-    st.subheader("Course Overview")
-    st.write(
-        "This program assumes prior knowledge of Python and covers data engineering, data science, and AI."
-    )
-    st.write("Use the sidebar to filter weeks and export the plan.")
-    st.dataframe(to_dataframe(filtered), use_container_width=True)
-
-with tab_weeks:
-    for c in filtered:
-        with st.expander(f"Week {c['week']}: {c['title']} — {c['phase']}"):
-            left, right = st.columns([2, 1])
-            with left:
-                st.markdown("#### Topics")
-                st.markdown("\n".join([f"- {t}" for t in c["topics"]]))
-                st.markdown("#### Learning Goals")
-                st.markdown("\n".join([f"- {g}" for g in c["goals"]]))
-            with right:
-                st.markdown("#### Week Summary")
-                st.info(
-                    f"**Project:** {c['project']['name']}\n\n" +
-                    "\n".join([f"• {t}" for t in c["project"]["tasks"]])
-                )
-                if show_links and c["project"].get("datasets"):
-                    st.markdown("**Datasets**")
-                    for ds in c["project"]["datasets"]:
-                        label = ds.get("label", "Dataset")
-                        url = ds.get("url")
-                        if url:
-                            st.markdown(f"- [{label}]({url})")
-                        else:
-                            st.markdown(f"- {label}")
-
-with tab_projects:
-    st.subheader("All Projects")
-    for c in filtered:
-        st.markdown(f"### Week {c['week']}: {c['project']['name']}")
-        st.markdown("**Tasks**")
-        st.markdown("\n".join([f"- {t}" for t in c["project"]["tasks"]]))
-        if show_links and c["project"].get("datasets"):
-            st.markdown("**Datasets**")
-            for ds in c["project"].get("datasets", []):
-                label = ds.get("label", "Dataset")
-                url = ds.get("url")
-                if url:
-                    st.markdown(f"- [{label}]({url})")
-                else:
-                    st.markdown(f"- {label}")
-        st.divider()
-
-# ----------------------------
-# Deployment Notes (display only)
-# ----------------------------
-st.caption(
-    dedent(
-        """
-        **Deploying**: Save this file as `app.py`, then run locally with `streamlit run app.py`.\n
-        For easy deployment, you can use Streamlit Community Cloud (share.streamlit.io) or deploy on any server with Python.\n
-        **Editing the curriculum**: Modify the `CURRICULUM` list at the top of this file to add/remove weeks, update projects, or change dataset links.
-        """
-    )
-)

@@ -15,9 +15,9 @@
             "name": "Curriculum",
             "type": "debugpy",
             "request": "launch",
-            "program": "/Users/subhasht/Desktop/VSCode Programs/Curriculam",
+            "program": "/Users/subhasht/Desktop/VSCode Programs/DataEngineers_Curriculum",
             "args": ["run",
-                    "Users/subhasht/Desktop/VSCode Programs/Curriculam/curriculam.py",
+                    "Users/subhasht/Desktop/VSCode Programs/Curriculam/curriculum.py",
                     "--theme.primaryColor=06b0f1"
         ]
         }

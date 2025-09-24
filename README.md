@@ -1,7 +1,10 @@
-# 📚 Data Engineers Curriculum (12 Weeks)
+# 🔥 GenAI Forge: Data • Science • Engineering — 12-Week Program
 
-This repository contains a **12-week structured curriculum** for training in **Data Engineering, Data Science, and AI**.  
+This repository contains a **12-week structured curriculum** for training in  
+**Data Engineering, Data Science, and Generative AI (GenAI)**.  
 Python is a prerequisite for this program.
+
+The repo includes a **Streamlit app** to explore the curriculum interactively, export CSV/Markdown syllabi, and view sample projects.
 
 ---
 
@@ -21,8 +24,8 @@ Python is a prerequisite for this program.
 
 ### Phase 3: AI & Advanced ML (Weeks 9–12)
 - **Week 9:** Deep Learning Basics (PyTorch/TensorFlow)  
-- **Week 10:** Natural Language Processing (NLP)  
-- **Week 11:** Model Deployment & MLOps  
+- **Week 10:** NLP & Generative AI (Embeddings, LLMs, Prompt Engineering, RAG)  
+- **Week 11:** Model Deployment, MLOps & AI Governance  
 - **Week 12:** Capstone Projects (End-to-End integration)
 
 ---
@@ -38,9 +41,19 @@ Python is a prerequisite for this program.
 - **Credit Card Fraud Detection**  
 - **Customer Segmentation**  
 - **Handwritten Digit Recognition (MNIST)**  
-- **Sentiment Analysis on Movie Reviews**  
-- **Deploy Predictive Model API**  
-- **Capstone:** End-to-End ETL + ML Model Deployment  
+- **Sentiment + GenAI Assistant (LLM-powered)**  
+- **Deploy Predictive Model API + AI Governance Report**  
+- **Capstone:** End-to-End ETL + ML/GenAI Model Deployment  
+
+---
+
+## 📦 Installation & Setup
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/<your-username>/genai_forge.git
+cd genai_forge
+
 
 ---
 

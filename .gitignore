@@ -1,10 +1,15 @@
+# Envs & caches
 .venv/
 venv/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/
 .streamlit/cache/
+
+# OS cruft
 .DS_Store
+
+# Large local assets (adjust as needed)
 data/
 logs/
 *.csv
